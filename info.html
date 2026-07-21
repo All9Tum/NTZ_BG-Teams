@@ -1,0 +1,304 @@
+<!-- CONFIRMATION: NEITHER Mermaid JS NOR SVG were used anywhere in the output. -->
+<!-- PALETTE: Netizen Vibrant Orange (#FF6C2F), Deep Slate (#1E293B), Pure White (#FFFFFF), Success Emerald (#10B981) -->
+<!-- PLAN: 
+1. Introduction: Hook the user with the "1 Minute" claim and explain the tool's purpose.
+2. Data Overview (Compare Goal): Use a Bar Chart to compare the time taken between the old method (Photoshop) and the new Netizen Generator.
+3. Anatomy of Layout (Composition Goal): Use a Donut Chart to show the proportion of canvas space allocated to different elements (Background, Text, Badges).
+4. Process Flow (Organize Goal): A 4-step responsive grid layout utilizing Unicode icons to guide the user through Setup, Personalization, Decoration, and Download.
+5. Conclusion/Pro Tips: Highlight best practices using a styled checklist. 
+-->
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netizen Teams BG Generator - Infographic Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        netizen: '#FF6C2F',
+                        dark: '#1E293B',
+                        light: '#F8FAFC',
+                        success: '#10B981'
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Tahoma', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-light text-dark antialiased">
+
+    <nav class="bg-dark text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold">
+                <span class="text-netizen">N</span>etizen
+            </div>
+            <div class="text-sm font-semibold tracking-wide">TEAMS BG GUIDE</div>
+        </div>
+    </nav>
+
+    <header class="bg-white py-16 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="inline-block bg-orange-100 text-netizen px-4 py-1 rounded-full text-sm font-bold mb-4">
+                🚀 FAST & EASY
+            </div>
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6 text-dark">
+                สร้างพื้นหลัง <span class="text-netizen">Netizen Teams</span> ใน 1 นาที!
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                เครื่องมือใหม่ล่าสุดที่จะช่วยให้พนักงาน Netizen ทุกคนสามารถสร้างรูปพื้นหลังสำหรับการประชุม Microsoft Teams ได้อย่างมืออาชีพ ไม่ต้องพึ่งโปรแกรมแต่งภาพที่ซับซ้อน เพียงแค่กรอกข้อมูลและเลือกรูปภาพที่คุณต้องการ
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-12 space-y-16">
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                <div class="chart-container">
+                    <canvas id="timeComparisonChart"></canvas>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 space-y-6">
+                <div class="text-netizen text-5xl">⏱️</div>
+                <h2 class="text-3xl font-bold">ประหยัดเวลา เพิ่มประสิทธิภาพ</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    กราฟแท่งแสดงการเปรียบเทียบเวลาที่ใช้ในการสร้างรูปพื้นหลัง จากข้อมูลพบว่า <strong>Netizen BG Generator</strong> ช่วยลดระยะเวลาการทำงานลงได้อย่างมหาศาล จากเดิมที่ต้องใช้เวลาจัดวางเลย์เอาต์ในโปรแกรมแต่งภาพกว่า 15 นาที ปัจจุบันคุณสามารถทำเสร็จได้ในเวลาไม่ถึง 1 นาทีเท่านั้น
+                </p>
+                <div class="bg-orange-50 border-l-4 border-netizen p-4 rounded-r-lg">
+                    <p class="font-semibold text-dark">🎯 Key Takeaway:</p>
+                    <p class="text-gray-600">ลดระยะเวลาการทำงานลงถึง 93% ทำให้พนักงานมีเวลาโฟกัสกับเนื้องานหลักได้มากขึ้น</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-8 md:p-12 rounded-3xl shadow-xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">4 ขั้นตอนง่ายๆ สู่พื้นหลังสุดโปร่ง</h2>
+                <p class="text-gray-600 text-lg">ทำตามลำดับขั้นตอนด้านล่าง เพื่อผลลัพธ์ที่สมบูรณ์แบบที่สุด</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="bg-light p-6 rounded-2xl text-center relative overflow-hidden transition hover:-translate-y-2 hover:shadow-lg">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gray-300"></div>
+                    <div class="text-6xl mb-4 mt-2">💻</div>
+                    <h3 class="text-xl font-bold mb-2">1. เตรียมตัว</h3>
+                    <p class="text-gray-500 text-sm mb-4">(The Setup)</p>
+                    <p class="text-gray-700">เปิดไฟล์ <code class="bg-white px-2 py-1 rounded text-netizen">netizen-8-badges.html</code> ผ่านเว็บเบราว์เซอร์ที่คุณคุ้นเคย เช่น Chrome หรือ Edge</p>
+                </div>
+
+                <div class="bg-light p-6 rounded-2xl text-center relative overflow-hidden transition hover:-translate-y-2 hover:shadow-lg">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-netizen"></div>
+                    <div class="text-6xl mb-4 mt-2">✍️</div>
+                    <h3 class="text-xl font-bold mb-2">2. กรอกข้อมูล</h3>
+                    <p class="text-gray-500 text-sm mb-4">(Personalize)</p>
+                    <ul class="text-left text-gray-700 text-sm space-y-2 mb-4 bg-white p-3 rounded-lg">
+                        <li><strong>Nickname:</strong> ชื่อเล่นภาษาอังกฤษ</li>
+                        <li><strong>Full Name:</strong> ชื่อ-นามสกุลจริง</li>
+                        <li><strong>Position:</strong> ตำแหน่งงาน</li>
+                    </ul>
+                </div>
+
+                <div class="bg-light p-6 rounded-2xl text-center relative overflow-hidden transition hover:-translate-y-2 hover:shadow-lg">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-blue-500"></div>
+                    <div class="text-6xl mb-4 mt-2">🏅</div>
+                    <h3 class="text-xl font-bold mb-2">3. ตกแต่ง</h3>
+                    <p class="text-gray-500 text-sm mb-4">(Decorate)</p>
+                    <p class="text-gray-700 mb-2">เลือกรูปฉากหลังที่ต้องการ และคลิกที่ช่อง 1-8 เพื่อใส่รูปเหรียญรางวัล</p>
+                    <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full">จัดเรียง 2 คอลัมน์อัตโนมัติ</span>
+                </div>
+
+                <div class="bg-light p-6 rounded-2xl text-center relative overflow-hidden transition hover:-translate-y-2 hover:shadow-lg">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-success"></div>
+                    <div class="text-6xl mb-4 mt-2">📥</div>
+                    <h3 class="text-xl font-bold mb-2">4. ดาวน์โหลด</h3>
+                    <p class="text-gray-500 text-sm mb-4">(Get It!)</p>
+                    <p class="text-gray-700">ตรวจสอบความเรียบร้อยที่รูป Preview ด้านล่าง แล้วกดปุ่มสีส้มเพื่อเซฟรูปไปใช้ได้เลย!</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="text-blue-500 text-5xl">📊</div>
+                <h2 class="text-3xl font-bold">สัดส่วนพื้นที่บนเลย์เอาต์</h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    กราฟโดนัทแสดงการจัดสรรพื้นที่บนผืนผ้าใบขนาด 1920x1080 พิกเซล การออกแบบนี้ถูกคิดค้นมาเพื่อไม่ให้กราฟิกบดบังใบหน้าของผู้ใช้งานขณะเปิดกล้องประชุม โดยเน้นให้พื้นที่หลักเป็นส่วนของพื้นหลัง และจัดสรรพื้นที่ด้านข้างสำหรับข้อมูลอย่างลงตัว
+                </p>
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                    <p class="font-semibold text-dark">🎯 Key Takeaway:</p>
+                    <p class="text-gray-600">พื้นที่เหรียญรางวัล 8 ช่อง (20%) ถูกจัดวางไว้ริมขวา เพื่อสร้างความน่าเชื่อถือโดยไม่รบกวนสายตา</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                <div class="chart-container">
+                    <canvas id="compositionChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-dark text-white p-8 md:p-12 rounded-3xl shadow-xl flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="md:w-1/3 text-center md:text-left">
+                <div class="text-6xl mb-4">💡</div>
+                <h2 class="text-3xl font-bold mb-2 text-netizen">ทริคเด็ด (Pro Tips)</h2>
+                <p class="text-gray-400">เทคนิคเล็กๆ น้อยๆ เพื่อให้ได้ภาพที่คมชัดและสมบูรณ์แบบที่สุด</p>
+            </div>
+            <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-gray-800 p-4 rounded-xl flex items-start gap-4 border border-gray-700">
+                    <div class="text-success text-xl">✅</div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">ทรงสี่เหลี่ยมจัตุรัส</h4>
+                        <p class="text-sm text-gray-400">ใช้รูป Badge ทรงจัตุรัส เพื่อสัดส่วนที่เป๊ะที่สุดเมื่อจัดเรียง</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-xl flex items-start gap-4 border border-gray-700">
+                    <div class="text-success text-xl">✅</div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">ไฟล์ .PNG</h4>
+                        <p class="text-sm text-gray-400">แนะนำให้ใช้ไฟล์นามสกุล .png ที่มีพื้นหลังโปร่งใส เพื่อความเนียนตา</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 p-4 rounded-xl flex items-start gap-4 border border-gray-700 sm:col-span-2">
+                    <div class="text-success text-xl">✅</div>
+                    <div>
+                        <h4 class="font-bold text-lg mb-1">ลบเริ่มใหม่ได้เสมอ</h4>
+                        <p class="text-sm text-gray-400">หากใส่รูปผิดช่อง หรือพิมพ์ผิด ไม่ต้องตกใจ เพียงกดปุ่ม "ล้างทั้งหมด" เพื่อเริ่มต้นใหม่ได้ทันที</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 py-8 text-center text-gray-500 text-sm">
+        <p>สร้างสรรค์โดย: <strong>SAP Solution Consultant Team (Netizen)</strong></p>
+        <p class="mt-2">© 2026 Netizen. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const chartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        font: {
+                            family: "'Segoe UI', Tahoma, sans-serif",
+                            size: 14
+                        },
+                        color: '#333'
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        const ctxTime = document.getElementById('timeComparisonChart').getContext('2d');
+        new Chart(ctxTime, {
+            type: 'bar',
+            data: {
+                labels: [
+                    ['การทำแบบเก่า', '(Photoshop)'], 
+                    ['การใช้ Netizen', 'Generator']
+                ],
+                datasets: [{
+                    label: 'เวลาที่ใช้ (นาที)',
+                    data: [15, 1],
+                    backgroundColor: [
+                        '#94A3B8', 
+                        '#FF6C2F'  
+                    ],
+                    borderRadius: 8,
+                    borderSkipped: false
+                }]
+            },
+            options: {
+                ...chartOptions,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'เวลา (นาที)',
+                            font: { family: "'Segoe UI', sans-serif" }
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            font: { family: "'Segoe UI', sans-serif" }
+                        }
+                    }
+                }
+            }
+        });
+
+        const ctxComp = document.getElementById('compositionChart').getContext('2d');
+        new Chart(ctxComp, {
+            type: 'doughnut',
+            data: {
+                labels: [
+                    ['พื้นที่รูป', 'พื้นหลัง'], 
+                    ['พื้นที่ใส่ข้อความ', '(ชื่อ/ตำแหน่ง)'], 
+                    ['พื้นที่เหรียญรางวัล', '(8 ช่อง)']
+                ],
+                datasets: [{
+                    data: [70, 10, 20],
+                    backgroundColor: [
+                        '#F1F5F9', 
+                        '#3B82F6', 
+                        '#FF6C2F'  
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#ffffff',
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                ...chartOptions,
+                cutout: '65%',
+                layout: {
+                    padding: 20
+                }
+            }
+        });
+    </script>
+</body>
+</html>
